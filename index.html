@@ -14,29 +14,28 @@
             text-align: center;
             background-color: #ffff;
         }
-
         header {
             background-color: #131313;
             color: #EF4E25;
             text-align: center;
-            padding: 20px 10px;
-            font-size: 40px;
+            padding: 20px;
+            font-size: 30px;
             border: 2px solid #EF4E25;
+            display: flex;
+            justify-content: space-between; /* Spaces items evenly, placing the image on the right */
+            align-items: center; /* Vertically centers the content within the header */
         }
         nav a {
             color: #b86b78
         }
-
         nav a:hover {
             background-color: #575757;
         }
-
         main {
             padding: 20px;
             font-style: Noto sans;
             background-color: white;
         }
-
         footer {
             background-color: #131313;
             color: white;
@@ -51,6 +50,9 @@
         h2 {
             margin-top: 10px; /*adds space above the h2*/
             margin-bottom: 15px; /*adds space below the h2*/
+        }
+        .subtitle {
+            font-size: smaller;
         }
     </style>
 <style>
@@ -84,22 +86,17 @@
     .left {
         text-align: left;
     }
-    .subtitle {
-        font-size: 25px;
-    }
 </style>
 </head>
-<header>
-    <table>
-        <thead>
-            <tr>
-                <th>#HACK2024 Surakarta<br><span class="subtitle">INDIGITOUS</span></th>
-                <th><img src="HACK Logo_White Cursor.png" alt="HACK logo white cursor" class="right" style="max-width:75%;"></th>
-            </tr>
-        </thead>
-    </table>
-</header>
 <body>
+     <header class="header">
+        <div class="title">
+            <h1>#HACK2024 Surakarta<br><span class="subtitle">INDIGITOUS</span></h1>
+        </div>
+        <div class="logo">
+            <img src="/Users/keluargaepiphaneia/Downloads/HACK Logo_White Cursor.png" alt="Logo" style="max-width:75%;">
+        </div>
+    </header>
     <main>
         <br><br>
         <h2>Apa itu #HACK?</h2>
