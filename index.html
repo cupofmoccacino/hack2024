@@ -3,155 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#HACK2024 Surakarta</title>
+    <title>Hack 2024 Layout</title>
     <style>
         body {
             font-style: Noto sans;
-            color: #131313;
-            margin: 50px;
-            padding: 30px;
-            font-size: 22.5px;
-            text-align: center;
-            background-color: #ffff;
+            margin: 0;
+            padding: 0;
+            background-color: white;
         }
+
         header {
-            background-color: #131313;
-            color: #EF4E25;
+            background-color: #EF4E25;
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding: 50px;
-            font-size: 30px;
-            border: 2px solid #EF4E25;
-            align-items: center;
         }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: #EF4E25;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            color:#131313;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #131313;
+        }
+
         nav a {
-            color: #b86b78
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
         }
 
         nav a:hover {
-            background-color: #575757;
+            background-color: #555;
         }
 
-        main {
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 20px;
-            font-style: Noto sans;
             background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .columns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1;
+            background-color: #e7e7e7;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
         }
 
         footer {
             background-color: #131313;
             color: white;
+            padding: 20px;
             text-align: center;
-            padding: 10px 0;
-            font-size: 15px;
-            border: 2px dotted #C4BCB7
         }
-        h1 {
-            margin-bottom: 10px; /*adds space below the h1*/
-            text-align: left;
-            margin-bottom: 5px;
-            font-size: 45px;
-        }
-        h2 {
-            margin-top: 10px; /*adds space above the h2*/
-            margin-bottom: 15px; /*adds space below the h2*/
-        }
-        .title {
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            padding: 10px;
-        }
-        .subtitle {
-            font-size: 30px;
-        }
-        .column {
-            display: flex;
-            width: 100%;
-        }
-        .left-section {
-            flex: 4; 
-        }
-        .right-section {
-            flex: 6; 
-            display: flex;
-            justify-content: flex-end; 
-        }
-        .right-section img {
-            max-width:100%
-        }
-        
     </style>
-<style>
-    a {
-        color: #b86b78; /*normal link color*/
-    }
-    a:hover{
-        color: #EF4E25; /*link color when hovered*/
-    }
-</style>
-<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    th, td {
-        border: none;
-        padding: 45px;
-        text-align: left; /*default allignment for headings and cells*/     
-    }
-    th {
-        background-color: #131313;
-    }
-    .center {
-        text-align: center;
-    }
-    .right {
-        text-align: right;
-        width: 100%;
-    }
-    .left {
-        text-align: left;
-    }
-</style>
 </head>
 <body>
-    <header class="header">
-        <div class="column">
-            <div class="left-section">
-            <h1>#HACK2024 Surakarta<br><span class="subtitle">INDIGITOUS</span></h1>
+
+    <header>
+        <img src="Hackathon global untuk misi dan pemuridan.png" style="max-width:100%">
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="#">Jadwal</a>
+        <a href="#">Pendaftaran</a>
+    </nav>
+    <div>
+        <h1>KeluargAI</h1>
+    </div>
+    <div class="container">
+        <h2 class="section-title">Selamat datang di Indigitous #HACK2024 Surakarta</h2>
+        <div class="columns">
+            <div class="column">
+                <img src="https://www.flaticon.com/free-icons/question" title="question icons"Question icons created by Mzipi - Flaticon>
+                <h3>Apa itu #HACK?</h3>
+                <p>Seputar hackathon.</p>
             </div>
-            <div class="right-section">
-            <img src="HACK Logo_White Cursor.png" alt="logo" style="max-width:80%">
+            <div class="column">
+                <img src="https://www.flaticon.com/free-icons/about" title="about icons"About icons created by Smashicons - Flaticon>
+                <h3>Untuk siapa saja?</h3>
+                <p>Siapa saja yang dapat mengikuti Indigitous #HACK2024?</p>
+            </div>
+            <div class="column">
+                <img src="https://www.flaticon.com/free-icons/where-to-go" title="where to go icons"Where to go icons created by kerismaker - Flaticon>
+                <h3>Tempat acara</h3>
+                <p>Kapan dan dimana acara #HACK2024 Surakarta akan dilaksanakan?</p>
             </div>
         </div>
-    </header>
-    <main>
-        <br><br>
-        <h2>Apa itu #HACK?</h2>
-        <p>Hackathon adalah acara bagi para progammer, pengembang, teknisi, desainer UX, dll untuk membawa kreativitas mereka melalui teknologi. Selama acara, orang-orang dengan latar belakang teknis berkumpul memecahkan masalah dan mencari solusi bersama.</p>
-        <br>
-        <h2>Lalu apa itu Indigitous #HACK2024?</h2>
-        <p>#HACK2024 adalah inisiatif dari Indigitous. Untuk mengenal Indigitous lebih lanjut silahkan klik <a href="https://indigitous.org/" target="_blank">tautan ini</a>.<br>Yang membedakan Indigitous #HACK dari hackathon yang lain adalah setiap peserta menggunakan kemampuan mereka untuk membawa berita Injil kepada dunia yang baru, orang-orang baru di tempat-tempat baru.</p>
-        <br>
-        <h2>Siapa yang bisa bergabung di Indigitous #HACK2024?</h2>
-        <p>Bukan hanya bagi progammer, pengembang, dan UX desainer, namun juga seniman, pembuat konten, hamba Tuhan, dan pimpinan gereja; semua orang yang ingin mempersembahkan kemampuannya untuk bekerja bersama membagikan kasih Kristus bagi dunia.</p>
-        <br>
-        <h2>Apa yang akan dilakukan dalam Indigitous #HACK2024?</h2>
-        <p>Bersekutu bersama dengan saudara seiman yang lain, membagikan beban dan ide-ide dalam pelayanan, bekerja bersama untuk satu tujuan membagikan kasih Tuhan.
-        <br><br>
-        <h2>Kapan Indigitous #HACK2024 Surakarta?</h2>
-        <p>Jumat, 1 November 2024 s.d. Sabtu, 9 November 2024.</p>
-        <br>
-        <h2>Pernyataan Iman</h2>
-        <p> Kunjungi <a href="https://indigitous.org/about/statement-of-faith/" target="_blank">tautan ini</a> untuk melihat pernyataan iman kami.</p>
-        <br>
-        <h2>Sudah siap untuk bergabung?</h2>
-        <p>Kunjungi <a href="https://airtable.com/appos3T4DqJknh94l/pag52e6co68VPVcWJ/form" target="_blank">tautan ini</a> untuk pendaftaran.</p>
-        <br><br><br>
-    </main>
-    <nav>
-        <p>*Untuk info dan pertanyaan lebih lanjut dapat dilihat di website <a href="https://hack.indigitous.org/faq/" target="_blank">Indigitous</a> atau menghubungi <a href="mailto:admin@hack2024-surakarta.online">email berikut</a>.</p>
-    </nav>
+    </div>
+
     <footer>
-        <p>"Hendaklah damai sejahtera Kristus memerintah dalam hatimu, karena untuk itulah kamu telah dipanggil menjadi satu tubuh. Dan bersyukurlah.<br>Hendaklah perkataan Kristus diam dengan segala kekayaannya di antara kamu, sehingga kamu dengan segala hikmat mengajar dan menegur seorang akan yang lain<br>dan sambil menyanyikan mazmur, dan puji-pujian dan nyanyian rohani, kamu mengucap syukur kepada Allah di dalam hatimu.<br>Dan segala sesuatu yang kamu lakukan dengan perkataan atau perbuatan, lakukanlah semuanya itu dalam nama Tuhan Yesus,<br>sambil mengucap syukur oleh Dia kepada Allah, Bapa kita."<br>Kolose 3:15-17</p>
-        &copy; #HACK2024
+        <p>&copy; Indigitous #HACK2024</p>
     </footer>
+
+</body>
+</html>
