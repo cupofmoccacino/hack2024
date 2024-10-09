@@ -3,89 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel Header</title>
+    <title>Image Carousel with Navigation, Home Button, and Footer</title>
     <style>
-        /* Style for the header */
-        header {
+        /* Carousel Container */
+        .carousel-container {
             position: relative;
             width: 100%;
             height: 100vh; /* Full viewport height */
-            overflow: hidden;
+            overflow: hidden; /* Hide overflow */
         }
 
-        /* Style for the slides */
-        .carousel {
+        /* Image styling */
+        .carousel-image {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            object-fit: cover; /* Cover the container */
+            opacity: 0; /* Start as invisible */
+            transition: opacity 1s ease-in-out; /* Smooth transition */
         }
 
-        .slides {
-            display: none; /* Hide all slides by default */
+        /* Show class to make image visible */
+        .show {
+            opacity: 1; /* Make the image fully visible */
+        }
+
+        /* Navigation buttons styling */
+        .nav-button {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1.5em;
+            z-index: 10; /* Above images */
         }
 
-        /* Show the first slide */
-        .active {
-            display: block;
+        .prev {
+            left: 20px; /* Position for previous button */
         }
 
-        /* Caption styling */
-        .caption {
+        .next {
+            right: 20px; /* Position for next button */
+        }
+
+        /* Home button styling */
+        .home-button {
             position: absolute;
-            bottom: 50px;
-            left: 50px;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1em;
+            z-index: 10; /* Above images */
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
-            font-size: 2em;
-            z-index: 2;
-        }
-
-        /* Add animation to slides */
-        .fade {
-            animation: fadeEffect 0.70s;
-        }
-
-        @keyframes fadeEffect {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="carousel">
-        <!-- First Slide -->
-        <img class="slides fade" src="1.png" alt="Slide 1">
-        <!-- Second Slide -->
-        <img class="slides fade" src="2.png" alt="Slide 2">
-        <!-- Third Slide -->
-        <img class="slides fade" src="3.png" alt="Slide 3">
-        <!-- Fourth Slide -->
-        <img class="slides fade" src="4.png" alt="Slide 4">
-        <!-- Fifth Slide -->
-        <img class="slides fade" src="5.png" alt="Slide 5">
-        <!-- Sixth Slide -->
-        <img class="slides fade" src="4.png" alt="Slide 6">
-    </div>
-<!-- JavaScript for controlling the carousel -->
-<script>
-    let slideIndex = 0;
-    showSlides();
+<div class="carousel-container">
+    <!-- Carousel Images -->
+    <img src="1.png" class="carousel-image show" id="image1" alt="Jadwal 1">
+    <img src="2.png" class="carousel-image" id="image2" alt="Jadwal 2">
+    <img src="3.png" class="carousel-image" id="image3" alt="Jadwal 3">
+    <img src="4.png" class="carousel-image" id="image1" alt="Jadwal 4">
+    <img src="5.png" class="carousel-image" id="image2" alt="Jadwal 5">
+    <img src="6.png" class="carousel-image" id="image3" alt="Jadwal 6">
 
-    function showSlides() {
-        let slides = document.getElementsByClassName("slides");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        slides[slideIndex-1].style.display = "block";  
-        setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    <!-- Navigation Buttons -->
+    <button class="nav-button prev" onclick="prevImage()">&#10094;</button>
+    <button class="nav-button next" onclick="nextImage()">&#10095;</button>
+
+    <!-- Home Button -->
+    <button class="home-button" onclick="goHome()">Home</button>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; Indigitous #HACK2024 & Yayasan Lembaga SABDA</p>
+</footer>
+
+<!-- JavaScript for the dissolve effect -->
+<script>
+    const images = document.querySelectorAll(".carousel-image");
+    let currentIndex = 0;
+
+    function changeImage(newIndex) {
+        images[currentIndex].classList.remove("show"); // Hide current image
+        currentIndex = newIndex; // Update current index
+        images[currentIndex].classList.add("show"); // Show new image
     }
+
+    function nextImage() {
+        const nextIndex = (currentIndex + 1) % images.length; // Move to the next image
+        changeImage(nextIndex);
+    }
+
+    function prevImage() {
+        const prevIndex = (currentIndex - 1 + images.length) % images.length; // Move to the previous image
+        changeImage(prevIndex);
+    }
+
+    function goHome() {
+        window.location.href = "index.html"; // Redirect to homepage
+    }
+
+    setInterval(nextImage, 6000); // Automatically change image every 6 seconds
 </script>
+
 </body>
 </html>
