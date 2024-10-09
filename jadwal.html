@@ -3,136 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peserta HACK 2024</title>
+    <title>Carousel Header</title>
     <style>
-        body {
-            font-style: Noto sans;
-            margin: 0;
-            padding: 0;
-            font-size: 22.5px;
-            margin: 50px;
-            text-align: center;
-        }
-
+        /* Style for the header */
         header {
-            background-color: #EF4E25;
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden;
+        }
+
+        /* Style for the slides */
+        .carousel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slides {
+            display: none; /* Hide all slides by default */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Show the first slide */
+        .active {
+            display: block;
+        }
+
+        /* Caption styling */
+        .caption {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
             color: white;
-            padding: 20px;
-            text-align: center;
+            font-size: 2em;
+            z-index: 2;
         }
 
-        h1 {
-            text-align: center;
-            font-size: 40px;
-            color: #EF4E25;
-        }
-        
-        h2 {
-            text-align: center;
-            font-size: 28px;
-            color:#131313;
+        /* Add animation to slides */
+        .fade {
+            animation: fadeEffect 1.5s;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #131313;
+        @keyframes fadeEffect {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
         }
 
-        nav a {
-            padding: 15px 20px;
-            color: white;
-            text-decoration: none;
-            font-size: 25px;
-        }
-
-        nav a:hover {
-            background-color: #555;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 28px;
-            color: #333;
-        }
-
-        .columns {
-            display: flex;
-            gap: 20px;
-        }
-
-        .column {
-            flex: 1;
-            background-color: #e7e7e7;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #131313;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="jadwal.png" style="max-width:100%">
-    </header>
-</head>
-<body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="jadwal.html">Jadwal</a>
-        <a href="https://forms.gle/gPHxabLzzX8z8U7F6">Pendaftaran</a>
-    </nav>
-    <div>
-        <h1>KeluargAI</h1>
+<header>
+    <div class="carousel">
+        <!-- First Slide -->
+        <img class="slides active fade" src="1.png" alt="Slide 1">
+        <!-- Second Slide -->
+        <img class="slides fade" src="2.png" alt="Slide 2">
+        <!-- Third Slide -->
+        <img class="slides fade" src="3.png" alt="Slide 3">
+        <!-- Fourth Slide -->
+        <img class="slides active fade" src="4.png" alt="Slide 4">
+        <!-- Fifth Slide -->
+        <img class="slides fade" src="5.png" alt="Slide 5">
+        <!-- Sixth Slide -->
+        <img class="slides fade" src="4.png" alt="Slide 6">
     </div>
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <h3>1 November 2024<br>4-5 November 2024<br>6 November 2024<br>8-9 November 2024</h3>
-            </div>
-            <div class="column">
-                <h3>Pre-HACK (onsite)<br>Diskusi grup <img src="WA-icon.png" style="max-width:100%"><br>Perbincangan online <img src="zoom-icon.png" style="max-width:100%"><br>Hackathon (onsite)</h3>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <h2 class="section-title">Lihat lainnya</h2>
-        <div class="columns">
-            <div class="column">
-                <img src="question-mark.png" style="max-width:30%">
-                <h3><a href="tentang.html">Apa itu #HACK?</h3>
-                <p>Seputar hackathon.</p>
-            </div>
-            <div class="column">
-                <img src="destination.png" style="max-width:30%">
-                <h3>Tempat acara</h3>
-                <p>Kapan dan dimana acara #HACK2024 Surakarta akan dilaksanakan?</p>
-            </div>
-        </div>
-    </div>
-    <div>
-        <h2><a href="https://forms.gle/gPHxabLzzX8z8U7F6" target="_blank">Sudah siap mendaftar?</h2>
-    </div>
+<!-- JavaScript for controlling the carousel -->
+<script>
+    let slideIndex = 0;
+    showSlides();
 
-    <footer>
-        <p>&copy; Indigitous #HACK2024 & Yayasan Lembaga SABDA</p>
-    </footer>
+    function showSlides() {
+        let slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    }
+</script>
 
 </body>
 </html>
