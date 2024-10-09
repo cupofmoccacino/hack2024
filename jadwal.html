@@ -45,14 +45,19 @@
 
         /* Add animation to slides */
         .fade {
-            animation: fadeEffect 1.5s;
+            animation: fadeEffect 1s;
         }
 
         @keyframes fadeEffect {
-            from { opacity: 0.4; }
-            to { opacity: 1; }
+            from { opacity: 0; }
+            to { opacity: 0.70; }
         }
-
+        footer {
+            background-color: #131313;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -60,13 +65,13 @@
 <header>
     <div class="carousel">
         <!-- First Slide -->
-        <img class="slides active fade" src="1.png" alt="Slide 1">
+        <img class="slides fade" src="1.png" alt="Slide 1">
         <!-- Second Slide -->
         <img class="slides fade" src="2.png" alt="Slide 2">
         <!-- Third Slide -->
         <img class="slides fade" src="3.png" alt="Slide 3">
         <!-- Fourth Slide -->
-        <img class="slides active fade" src="4.png" alt="Slide 4">
+        <img class="slides fade" src="4.png" alt="Slide 4">
         <!-- Fifth Slide -->
         <img class="slides fade" src="5.png" alt="Slide 5">
         <!-- Sixth Slide -->
@@ -88,6 +93,8 @@
         setTimeout(showSlides, 3000); // Change slide every 3 seconds
     }
 </script>
-
+    <footer>
+        <p>&copy; Indigitous #HACK2024 & Yayasan Lembaga SABDA</p>
+    </footer>
 </body>
 </html>
