@@ -3,81 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HACK 2024 Surakarta</title>
+    <title>#HACK2024 Surakarta</title>
     <style>
-        body {
-            font-style: Noto sans;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            font-size: 22.5px;
-            margin: 50px;
-            text-align: center;
-        }
-
+        /* Full-page header with static background */
         header {
-            background-color: #EF4E25;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 40px;
-            color: #EF4E25;
-        }
-        
-        h2 {
-            text-align: center;
-            font-size: 28px;
-            color:#131313;
-        }
-
-        nav {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            background-image: url('background.png'); /* Replace with your static background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             display: flex;
             justify-content: center;
-            background-color: #131313;
-        }
-
-        nav a {
-            padding: 15px 20px;
+            align-items: center;
+            text-align: center;
             color: white;
-            text-decoration: none;
-            font-size: 25px;
         }
 
-        nav a:hover {
-            background-color: #555;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
+        /* Carousel content container */
+        .carousel-container {
+            position: absolute;
+            max-width: 800px;
+            background-color: EF4E25; /* Semi-transparent for readability */
             padding: 20px;
-            background-color: white;
+            border-radius: 10px;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s ease-in-out; /* Smooth dissolve effect */
         }
 
-        .section-title {
-            text-align: center;
+        /* Show class to make it visible */
+        .show {
+            opacity: 1; /* Fully visible */
+        }
+
+        /* Title styling */
+        .carousel-title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Subtitle styling */
+        .carousel-subtitle {
+            font-size: 1.5em;
             margin-bottom: 20px;
-            font-size: 28px;
-            color: #333;
         }
 
-        .columns {
-            display: flex;
-            gap: 20px;
+        /* Body text styling */
+        .carousel-body {
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
 
-        .column {
-            flex: 1;
-            background-color: #e7e7e7;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
+        /* Image inside carousel */
+        .carousel-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
         }
 
+        /* Navigation buttons */
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #131313; /* Semi-transparent */
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1.5em;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+        /* Footer styling */
         footer {
             background-color: #131313;
             color: white;
@@ -88,44 +95,64 @@
 </head>
 <body>
 
-    <header>
-        <img src="Hackathon global untuk misi dan pemuridan.png" style="max-width:100%">
-    </header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="jadwal.html">Jadwal</a>
-        <a href="https://forms.gle/gPHxabLzzX8z8U7F6">Pendaftaran</a>
-    </nav>
-    <div>
-        <h1>KeluargAI</h1>
-        <h2>Dari keluarga, bagi Tuhan dan sesama.</h2>
-    </div>
-    <div class="container">
-        <h2 class="section-title">Selamat datang di Indigitous #HACK2024 Surakarta</h2>
-        <div class="columns">
-            <div class="column">
-                <img src="question-mark.png" style="max-width:30%">
-                <h3><a href="tentang.html">Apa itu #HACK?</h3>
-                <p>Seputar hackathon.</p>
-            </div>
-            <div class="column">
-                <img src="about.png" style="max-width:30%">
-                <h3><a href="peserta.html">Untuk siapa saja?</h3>
-                <p>Siapa saja yang dapat mengikuti Indigitous #HACK2024?</p>
-            </div>
-            <div class="column">
-                <img src="destination.png" style="max-width:30%">
-                <h3><a href="lokasi.html">Tempat acara</h3>
-                <p>Kapan dan dimana acara #HACK2024 Surakarta akan dilaksanakan?</p>
-            </div>
-        </div>
+<!-- Header with static background -->
+<header>
+    <!-- Carousel Content 1 -->
+    <div class="carousel-container show" id="carousel1">
+        <img src="kop.png" alt="Hackathon" class="carousel-image"> <!-- Insert an image here -->
     </div>
 
-    <footer>
-        <p>&copy; Indigitous #HACK2024 & Yayasan Lembaga SABDA</p>
-    </footer>
+    <!-- Carousel Content 2 -->
+    <div class="carousel-container" id="carousel2">
+        <a href="tentang.html" class="carousel-title"><h1>Apa itu #HACK?</h1></a>
+        <h2 class="carousel-subtitle">Seputar Hackathon</h2>
+    </div>
+
+    <!-- Carousel Content 3 -->
+    <div class="carousel-container" id="carousel3">
+        <a href="peserta.html" class="carousel-title"><h1>Siapa yang Bisa Berpartisipasi?</h1></a>
+        <h2 class="carousel-subtitle">Lihat di sini untuk melihat bagaimana saudara dapat bekerja bersama.</h2>
+    </div>
+
+    <!-- Carousel Content -->
+    <div class="carousel-container" id="carousel4">
+        <a href="lokasi.html" class="carousel-title"><h1>Dimana?</h1></a>
+        <h2 class="carousel-subtitle">Online dan on-site</h2>
+    </div>
+
+    <!-- Navigation buttons -->
+    <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
+    <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+</header>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; Indigitous #HACK2024 & Yayasan Lembaga SABDA</p>
+</footer>
+
+<!-- JavaScript for the carousel -->
+<script>
+    const slides = document.querySelectorAll('.carousel-container');
+    let currentIndex = 0;
+
+    function changeSlide(newIndex) {
+        slides[currentIndex].classList.remove('show'); // Hide current slide
+        currentIndex = newIndex; // Update index
+        slides[currentIndex].classList.add('show'); // Show new slide
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        changeSlide(nextIndex);
+    }
+
+    function prevSlide() {
+        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+        changeSlide(prevIndex);
+    }
+
+    setInterval(nextSlide, 5000); // Auto-change every 5 seconds
+</script>
 
 </body>
 </html>
