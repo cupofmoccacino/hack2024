@@ -163,6 +163,21 @@
     <footer>
         <p>&copy; Indigitous #HACK2024</p>
     </footer>
+    <script>
+        // JavaScript for the carousel
+        const carouselItems = document.querySelectorAll('.heading-carousel div');
+        let currentIndex = 0;
 
+        function showNext() {
+            carouselItems[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            carouselItems[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNext, 3000); // Change every 3 seconds
+    </script>
+
+</body>
+</html>
 </body>
 </html>
