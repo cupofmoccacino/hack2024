@@ -118,7 +118,9 @@
             padding: 20px; /* Consistent padding */
             border-radius: 8px;
             text-align: center;
-            box-sizing: border-box; /* Ensures padding is included in width calculations */
+            box-sizing: border-box; 
+            height: 300px;
+            justify-content: center;
         }
 
         .column a {
@@ -139,12 +141,38 @@
 
         /* Responsive Styles */
         @media (max-width: 768px) {
+            body {
+                font-size: 18px; /* Smaller base font size for mobile */
+                margin: 20px; /* Adjust margin for mobile */
+            }
+
+            h1 {
+                font-size: 40px; /* Smaller font size for h1 */
+            }
+
+            h2 {
+                font-size: 30px; /* Smaller font size for h2 */
+            }
+
+            nav a {
+                font-size: 18px; /* Smaller font size for navigation links */
+                padding: 10px 15px; /* Adjust padding for smaller screens */
+            }
+
+            .heading-carousel div {
+                font-size: 30px; /* Smaller font size for carousel text */
+            }
+
             .columns {
                 flex-direction: column; /* Stack columns vertically on small screens */
             }
 
             .column {
-                margin-bottom: 20px; /* Space between stacked columns */
+                margin-bottom: 15px; /* Space between stacked columns */
+            }
+
+            footer {
+                font-size: 14px; /* Smaller font size for footer */
             }
         }
     </style>
