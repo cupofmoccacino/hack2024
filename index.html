@@ -35,6 +35,34 @@
             color:#131313;
         }
 
+         .heading-carousel {
+            position: relative;
+            height: 100px; /* Adjust based on your design */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heading-carousel div {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            font-size: 40px;
+            text-align: center;
+            color: #EF4E25;
+        }
+
+        .heading-carousel div.show {
+            opacity: 1;
+        }
+
+        .heading-carousel img {
+            max-width: 50%; /* Resize the PNG appropriately */
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
         nav {
             display: flex;
             justify-content: center;
@@ -57,7 +85,8 @@
             margin: 20px auto;
             padding: 20px;
             background-color: white;
-            opacity: 0.9; /* Add some transparency to see the background */
+            opacity: 0.9; 
+            text-decoration: none;
         }
 
         .section-title {
@@ -90,10 +119,18 @@
 </head>
 <body>
 
-    <header>
-        <img src="Hackathon global untuk misi dan pemuridan.png" style="max-width:100%">
-    </header>
-
+   <div class="heading-carousel">
+        <div class="active">
+            <h2>Hackcathon Global untuk Misi dan Pemuridan</h2>
+            <img src="HACK Black Cursor.png" alt="Transparent Image 1" style="height: 60px;"> <!-- Replace with your first PNG -->
+            <h1>Surakarta, 1-9 November 2024</h1>
+        </div>
+        <div>
+            <h1>KeluargAI</h1>
+            <img src="HACK Black Cursor.png" alt="Transparent Image 1" style="height: 60px;">
+            <h2>Dari Keluarga dan Gereja untuk Tuhan dan Sesama</h2>
+        </div>
+    </div>
     <nav>
         <a href="index.html">Home</a>
         <a href="tentang.html">Tentang</a>
@@ -102,7 +139,6 @@
     </nav>
     <div>
         <h1>Selamat datang di Indigitous #HACK2024 Surakarta</h1>
-        <h2>1-9 November 2024</h2>
     </div>
     <div class="container">
         <div class="columns">
