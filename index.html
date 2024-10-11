@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#HACK2024 Surakarta</title>
     <style>
-        /* Full-page header with static background */
+        body {
+            font-style: Noto sans;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        
         header {
             position: relative;
             width: 100%;
@@ -159,44 +165,39 @@
             color: white;
             padding: 20px;
             text-align: center;
-            font-size:22.5
         }
     </style>
 </head>
 <body>
+    
+    <header>
+    
+        <div class="carousel-container show" id="carousel1">
+            <h3 class="carousel-subtitle" style="font-size: 40px;"">Hackathon Global untuk Misi dan Pemuridan</h3> 
+            <img src="HACK Logo_White Cursor.png" class="carousel-image" alt="Overlay"> <!-- Insert an image here -->
+            <h2 class="carousel-title" style="font-size: 50px;">Surakarta 2024</h2>
+        </div>
 
-<!-- Header with static background -->
-<header>
-    <!-- Carousel Content 1 -->
-    <div class="carousel-container show" id="carousel1">
-        <h3 class="carousel-subtitle" style="font-size: 40px;"">Hackathon Global untuk Misi dan Pemuridan</h3> 
-        <img src="HACK Logo_White Cursor.png" class="carousel-image" alt="Overlay"> <!-- Insert an image here -->
-        <h2 class="carousel-title" style="font-size: 50px;">Surakarta 2024</h2>
-    </div>
+    
+        <div class="carousel-container" id="carousel2">
+            <h1 class="carousel-title">KeluargAI</h1>
+            <h2 class="carousel-subtitle" style="font-color: black">Dari Keluarga dan Gereja, untuk Tuhan dan Sesama</h2>
+        </div>
 
-    <!-- Carousel Content 2 -->
-    <div class="carousel-container" id="carousel2">
-        <h1 class="carousel-title">KeluargAI</h1>
-        <h2 class="carousel-subtitle" style="font-color: black">Dari Keluarga dan Gereja, untuk Tuhan dan Sesama</h2>
-    </div>
+        <div class="carousel-container" id="carousel3">
+            <a href="tentang.html" class="carousel-title"><h1>Apa itu #HACK?</h1></a>
+            <h2 class="carousel-subtitle" style="font-color: black">Seputar Hackathon</h2>
+        </div>
 
-    <!-- Carousel Content 3 -->
-    <div class="carousel-container" id="carousel3">
-        <a href="tentang.html" class="carousel-title"><h1>Apa itu #HACK?</h1></a>
-        <h2 class="carousel-subtitle" style="font-color: black">Seputar Hackathon</h2>
-    </div>
+        <div class="carousel-container" id="carousel4">
+            <a href="peserta.html" class="carousel-title"><h1>Siapa yang Bisa Berpartisipasi?</h1></a>
+            <h2 class="carousel-subtitle" style="font-color: black">Lihat di sini untuk melihat bagaimana saudara dapat bekerja bersama.</h2>
+        </div>
 
-    <!-- Carousel Content 4 -->
-    <div class="carousel-container" id="carousel4">
-        <a href="peserta.html" class="carousel-title"><h1>Siapa yang Bisa Berpartisipasi?</h1></a>
-        <h2 class="carousel-subtitle" style="font-color: black">Lihat di sini untuk melihat bagaimana saudara dapat bekerja bersama.</h2>
-    </div>
+        <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
+        <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+    </header>
 
-    <!-- Navigation buttons -->
-    <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
-    <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
-</header>
-<body>
     <nav>
         <a href="index.html">Home</a>
         <a href="tentang.html">Tentang</a>
