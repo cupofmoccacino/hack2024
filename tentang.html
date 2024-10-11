@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang HACK 2024</title>
+    <title>#HACK2024 Surakarta</title>
     <style>
         body {
-            font-style: Noto sans;
+            font-family: 'Noto Sans', sans-serif;
             margin: 0;
             padding: 0;
-            font-size: 22.5px;
-            margin: 50px;
-            text-align: center;
+            background-image: url('background.png'); /* Replace with your background image */
+            background-size: cover; /* Make sure the image covers the entire background */
+            background-attachment: fixed; /* This makes the background static */
+            background-position: center; /* Center the background */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
         }
 
         header {
@@ -23,20 +25,54 @@
 
         h1 {
             text-align: center;
-            font-size: 40px;
+            font-size: 70px;
             color: #EF4E25;
         }
         
         h2 {
             text-align: center;
-            font-size: 28px;
-            color:#131313;
+            font-size: 50px;
+            color: #EF4E25;
+            margin: 20px
         }
 
+         .heading-carousel {
+            position: relative;
+            height: 200px; /* Adjust based on your design */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 300px;
+        }
+
+        .heading-carousel div {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            font-size: 40px;
+            text-align: center;
+            color: #EF4E25;
+            width: 200%;
+        }
+
+        .heading-carousel div.show {
+            opacity: 1;
+        }
+
+        .heading-carousel img {
+            max-width: 50%; /* Resize the PNG appropriately */
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            padding-bottom: 20px;
+        }
+        
         nav {
             display: flex;
             justify-content: center;
             background-color: #131313;
+            z-index: 1;
+            margin-top: 600px;
         }
 
         nav a {
@@ -55,6 +91,8 @@
             margin: 20px auto;
             padding: 20px;
             background-color: white;
+            opacity: 0.9; 
+            text-decoration: none;
         }
 
         .section-title {
@@ -62,6 +100,7 @@
             margin-bottom: 20px;
             font-size: 28px;
             color: #333;
+            text-decoration: none;
         }
 
         .columns {
@@ -77,6 +116,11 @@
             text-align: center;
         }
 
+        .column a {
+            text-decoration: none; /* Remove underline */
+            color: #131313; /* Set to your desired color */
+        }
+
         footer {
             background-color: #131313;
             color: white;
@@ -87,11 +131,18 @@
 </head>
 <body>
 
-    <header>
-        <img src="tentang.png" style="max-width:100%">
-    </header>
-</head>
-<body>
+   <div class="heading-carousel">
+        <div class="active">
+            <h2>Hackcathon Global untuk Misi dan Pemuridan</h2>
+            <img src="HACK Black Cursor.png" alt="Transparent Image 1" style="max-width: 30%;"> <!-- Replace with your first PNG -->
+            <h1>Surakarta, 1-9 November 2024</h1>
+        </div>
+        <div>
+            <h2>Dari Keluarga dan Gereja untuk Tuhan dan Sesama</h2>
+            <img src="HACK Black Cursor.png" alt="Transparent Image 1" style="max-width: 30%;">
+            <h1>KeluargAI</h1>
+        </div>
+    </div>
     <nav>
         <a href="index.html">Home</a>
         <a href="tentang.html">Tentang</a>
@@ -99,12 +150,8 @@
         <a href="https://forms.gle/gPHxabLzzX8z8U7F6">Pendaftaran</a>
     </nav>
     <div>
-        <h1>KeluargAI</h1>
-        <h2>Dari keluarga, bagi Tuhan dan sesama.</h2>
-    </div>
-    <main>
-        <br><br>
-        <h2>Apa itu #HACK?</h2>
+        <h1>Tentang #HACK</h1>
+        <h2>Apa itu hackathon?</h2>
         <p>Hackathon adalah acara dimana para peserta bekerja bersama-sama untuk memecahkan atau menangani sebuah permasalahan melalui program komputer dan teknologi. </p>
         <br>
         <h2>Lalu apa itu Indigitous #HACK2024?</h2>
@@ -115,11 +162,15 @@
         <br>
         <h2>Apa yang akan dilakukan dalam Indigitous #HACK2024?</h2>
         <p>Bersekutu dengan saudara seiman dari latar belakang desain dan teknologi, membagikan beban dan saling menguatkan dalam firman Tuhan, juga menggabungkan gagasan baru bagi pelayanan Kristus sehingga dapat bekerja bersama untuk satu tujuan membagikan kasih Tuhan. </p>
-        <br><br>
-    </main>
+        <br>
+    </div>
     <div class="container">
-        <h2 class="section-title">Lihat lainnya</h2>
         <div class="columns">
+            <div class="column">
+                <img src="question-mark.png" style="max-width:30%">
+                <h3><a href="tentang.html">Apa itu #HACK?</h3>
+                <p>Seputar hackathon.</p>
+            </div>
             <div class="column">
                 <img src="about.png" style="max-width:30%">
                 <h3><a href="peserta.html">Untuk siapa saja?</h3>
@@ -127,18 +178,28 @@
             </div>
             <div class="column">
                 <img src="destination.png" style="max-width:30%">
-                <h3>Tempat acara</h3>
-                <p>Kapan dan dimana acara #HACK2024 Surakarta akan dilaksanakan?</p>
+                <h3><a href="jadwal.html">Jadwal acara</h3>
+                <p>Waktu dan lokasi acara.</p>
             </div>
         </div>
-    </div>
-    <div>
-        <h2><a href="https://forms.gle/gPHxabLzzX8z8U7F6" target="_blank">Sudah siap mendaftar?</h2>
     </div>
 
     <footer>
         <p>&copy; Indigitous #HACK2024 & Yayasan Lembaga SABDA</p>
     </footer>
+    <script>
+        // JavaScript for the carousel
+        const carouselItems = document.querySelectorAll('.heading-carousel div');
+        let currentIndex = 0;
+
+        function showNext() {
+            carouselItems[currentIndex].classList.remove('show');
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            carouselItems[currentIndex].classList.add('show');
+        }
+
+        setInterval(showNext, 3000); // Change every 3 seconds
+    </script>
 
 </body>
 </html>
