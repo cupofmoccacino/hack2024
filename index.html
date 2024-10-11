@@ -67,6 +67,7 @@
             display: flex;
             justify-content: center;
             background-color: #131313;
+            z-index: 1;
         }
 
         nav a {
@@ -170,9 +171,9 @@
         let currentIndex = 0;
 
         function showNext() {
-            carouselItems[currentIndex].classList.remove('active');
+            carouselItems[currentIndex].classList.remove('show');
             currentIndex = (currentIndex + 1) % carouselItems.length;
-            carouselItems[currentIndex].classList.add('active');
+            carouselItems[currentIndex].classList.add('show');
         }
 
         setInterval(showNext, 3000); // Change every 3 seconds
