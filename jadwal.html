@@ -76,11 +76,13 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: relative;
-            bottom: 0;
+            position: fixed; /* Change to fixed */
+            bottom: 0; /* Stick to the bottom */
+            left: 0; /* Ensure it spans the entire width */
             width: 100%;
             font-size: 15px;
             font-family: 'Noto Sans', sans-serif;
+            z-index: 10; /* Keep it above other content */
         }
     </style>
 </head>
