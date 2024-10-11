@@ -51,17 +51,22 @@
             right: 20px; /* Position for next button */
         }
 
-        /* Home button styling */
-        .home-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 1em;
-            z-index: 10; /* Above images */
+        /* Navigation bar styling */
+        nav {
+            background-color: #131313; /* Black background for the nav bar */
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            background-color: #555; /* Darker color on hover */
         }
 
         /* Footer styling */
@@ -83,17 +88,22 @@
     <img src="1.png" class="carousel-image show" id="image1" alt="Jadwal 1">
     <img src="2.png" class="carousel-image" id="image2" alt="Jadwal 2">
     <img src="3.png" class="carousel-image" id="image3" alt="Jadwal 3">
-    <img src="4.png" class="carousel-image" id="image1" alt="Jadwal 4">
-    <img src="5.png" class="carousel-image" id="image2" alt="Jadwal 5">
-    <img src="6.png" class="carousel-image" id="image3" alt="Jadwal 6">
+    <img src="4.png" class="carousel-image" id="image4" alt="Jadwal 4">
+    <img src="5.png" class="carousel-image" id="image5" alt="Jadwal 5">
+    <img src="6.png" class="carousel-image" id="image6" alt="Jadwal 6">
 
     <!-- Navigation Buttons -->
     <button class="nav-button prev" onclick="prevImage()">&#10094;</button>
     <button class="nav-button next" onclick="nextImage()">&#10095;</button>
-
-    <!-- Home Button -->
-    <button class="home-button" onclick="goHome()">Home</button>
 </div>
+
+<!-- Navigation Bar (Added Below Carousel) -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="jadwal.html">Jadwal</a>
+    <a href="https://forms.gle/gPHxabLzzX8z8U7F6">Pendaftaran</a>
+</nav>
 
 <!-- Footer -->
 <footer>
@@ -119,10 +129,6 @@
     function prevImage() {
         const prevIndex = (currentIndex - 1 + images.length) % images.length; // Move to the previous image
         changeImage(prevIndex);
-    }
-
-    function goHome() {
-        window.location.href = "index.html"; // Redirect to homepage
     }
 
     setInterval(nextImage, 4000); // Automatically change image every 4 seconds
