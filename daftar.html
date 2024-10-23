@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#HACK2024 Surakarta</title>
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.png'); 
+            background-size: cover; 
+            background-attachment: fixed; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            font-size: 25px;
+            line-height: 1.5;
+            margin: 50px;
+            text-align: center;
+            text-decoration: bold;
+        }
+
+        header {
+            background-color: #EF4E25;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 70px;
+            color: #EF4E25;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 50px;
+            color: #EF4E25;
+            margin: 20px
+        }
+
+         .heading-carousel {
+            position: relative;
+            height: 200px; /* Adjust based on your design */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 300px;
+        }
+
+        .heading-carousel div {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            font-size: 40px;
+            text-align: center;
+            color: #EF4E25;
+            width: 200%;
+        }
+
+        .heading-carousel div.show {
+            opacity: 1;
+        }
+
+        .heading-carousel img {
+            max-width: 50%; /* Resize the PNG appropriately */
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            padding-bottom: 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #131313;
+            z-index: 1;
+            margin-top: 340px;
+        }
+
+        nav a {
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            opacity: 0.9; 
+            text-decoration: none;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .columns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1;
+            background-color: #e7e7e7;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .column a {
+            text-decoration: none; /* Remove underline */
+            color: #131313; /* Set to your desired color */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 15px;
+        }
+@media (max-width: 768px) {
+            body {
+                font-size: 18px; /* Smaller base font size for mobile */
+                margin: 10px; /* Adjust margin for mobile */
+                background-size: 100%;
+                
+                
+            }
+
+            h1 {
+                font-size: 30px; /* Smaller font size for h1 */
+            }
+
+            h2 {
+                font-size: 20px; /* Smaller font size for h2 */
+            }
+
+            nav a {
+                font-size: 18px; /* Smaller font size for navigation links */
+                padding: 10px 10px; /* Adjust padding for smaller screens */
+            }
+
+            .heading-carousel div {
+                font-size: 20px; /* Smaller font size for carousel text */
+            }
+
+            .columns {
+                flex-direction: column; /* Stack columns vertically on small screens */
+            }
+
+            .column {
+                margin-bottom: 15px; /* Space between stacked columns */
+            }
+
+            footer {
+                font-size: 14px; /* Smaller font size for footer */
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <div class="heading-carousel">
+        <div class="active">
+            <h2>Tentang</h2>
+            <img src="HACK Black Cursor.png" alt="Transparent Image 1" style="max-width: 30%;"> <!-- Replace with your first PNG -->
+            <h1>Surakarta 2024</h1>
+        </div>
+        <div>
+            <h2>Dari Keluarga dan Gereja untuk Tuhan dan Sesama</h2>
+            <img src="HACK Black Cursor.png" alt="Transparent Image 1" style="max-width: 30%;">
+            <h1>KeluargAI</h1>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="jadwal.html">Jadwal</a>
+        <a href="daftar.html">Pendaftaran</a>
+    </nav>
+    <div class="container">
+        <h2 class="section-title">Pendaftaran seminar dan rangkaian acara Indigitous #HACK Surakarta</h2>
+        <div class="columns">
+            <div class="column">
+                <img src="open.png" style="max-width:30%">
+                <h3><a href="https://forms.gle/LN5hyW9G8wFJuaW37">Pembukaan #HACK2024</h3>
+                <p>Seminar pembukaan #HACK2024 KeluargA</p>
+            </div>
+            <div class="column">
+                <img src="hack.png" style="max-width:30%">
+                <h3><a href="https://forms.gle/LKz5KEAjQcy8srUM7">#HACK2024</h3>
+                <p>Seluruh rangkaian acara #HACK2024 SUrakarta.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Indigitous #HACK2024 & Yayasan Lembaga SABDA</p>
+    </footer>
+    <script>
+        // JavaScript for the carousel
+        const carouselItems = document.querySelectorAll('.heading-carousel div');
+        let currentIndex = 0;
+
+        function showNext() {
+            carouselItems[currentIndex].classList.remove('show');
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            carouselItems[currentIndex].classList.add('show');
+        }
+
+        setInterval(showNext, 3000); // Change every 3 seconds
+    </script>
+
+</body>
+</html>
